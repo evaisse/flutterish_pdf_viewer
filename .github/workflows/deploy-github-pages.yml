@@ -35,18 +35,22 @@ jobs:
           cache: true
 
       - name: Get dependencies
-        run: flutter pub get
+        run: |
+          cd example
+          flutter pub get
 
       - name: Enable web support
         run: flutter config --enable-web
 
       - name: Build Flutter web
-        run: flutter build web --release --base-href /${{ github.event.repository.name }}/
+        run: |
+          cd example
+          flutter build web --release --base-href /${{ github.event.repository.name }}/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/web'
+          path: 'example/build/web'
 
   deploy:
     environment:
