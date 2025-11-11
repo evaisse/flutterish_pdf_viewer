@@ -101,6 +101,18 @@ Replace `yourusername` with your GitHub username or organization name.
 
 Test the web build locally before deploying:
 
+### Quick Start (Unix/macOS/Linux)
+
+Use the provided script:
+
+```bash
+./serve-demo.sh
+```
+
+This will build and serve the demo at `http://localhost:8000`.
+
+### Manual Build and Serve
+
 ```bash
 cd example
 flutter build web --release
