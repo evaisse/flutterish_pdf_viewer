@@ -1,4 +1,12 @@
-# flutterish_pdf_viewer Example
+# Flutterish PDF Viewer - Demo App
+
+This is a demonstration Flutter web application showcasing all the features of the **Flutterish PDF Viewer** package.
+
+## 🌐 Live Demo
+
+**Visit the live demo at: [https://evaisse.github.io/flutterish_pdf_viewer/](https://evaisse.github.io/flutterish_pdf_viewer/)**
+
+## Overview
 
 This example demonstrates how to use the flutterish_pdf_viewer package.
 
@@ -23,15 +31,27 @@ This example demonstrates how to use the flutterish_pdf_viewer package.
 
 ## Running the Example
 
-1. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
+### Web (Recommended for Demo)
 
-2. Run the app:
-   ```bash
-   flutter run
-   ```
+```bash
+flutter pub get
+flutter run -d chrome
+```
+
+### Mobile/Desktop
+
+```bash
+flutter pub get
+flutter run
+```
+
+### Building for Production
+
+```bash
+flutter build web --release
+```
+
+The output will be in `build/web/`.
 
 ## Code Examples
 

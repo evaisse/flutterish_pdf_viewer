@@ -2,6 +2,19 @@
 
 A PDF viewer in Flutter that does not require any external native dependencies.
 
+## 🌐 Live Demo
+
+**[Try the live demo here!](https://evaisse.github.io/flutterish_pdf_viewer/)**
+
+The demo showcases all features of the library including:
+- Loading PDFs from URLs
+- Custom navigation controls
+- Download functionality
+- Loading from bytes/assets
+- And more!
+
+See [DEMO_FEATURES.md](DEMO_FEATURES.md) for a detailed breakdown of all demonstrated features.
+
 ## Features
 
 - 📱 Pure Flutter/Dart implementation - no native code required
@@ -185,12 +198,25 @@ Convenience widget for loading PDFs from bytes.
 
 Check out the [example](example) directory for a complete sample application.
 
-To run the example:
+**Live Demo:** [https://evaisse.github.io/flutterish_pdf_viewer/](https://evaisse.github.io/flutterish_pdf_viewer/)
+
+To run the example locally:
 
 ```bash
 cd example
 flutter run
 ```
+
+To run on web:
+
+```bash
+cd example
+flutter run -d chrome
+```
+
+### Deploying Your Own Demo
+
+Want to deploy your own version? See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for instructions on setting up GitHub Pages for this demo.
 
 ## Limitations
 
