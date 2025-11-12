@@ -16,9 +16,9 @@ void main() {
     test('should load PDF from bytes', () async {
       final controller = PdfController();
       final bytes = Uint8List.fromList([1, 2, 3, 4]);
-      
+
       await controller.loadFromBytes(bytes);
-      
+
       expect(controller.document, isNotNull);
       expect(controller.isLoading, isFalse);
       controller.dispose();
@@ -43,7 +43,7 @@ void main() {
     test('should create from bytes', () async {
       final bytes = Uint8List.fromList([1, 2, 3, 4]);
       final document = await PdfDocument.fromBytes(bytes);
-      
+
       expect(document.bytes, equals(bytes));
       expect(document.pageCount, greaterThanOrEqualTo(1));
     });

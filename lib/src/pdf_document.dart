@@ -1,13 +1,11 @@
 import 'dart:typed_data';
-import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 
 /// Represents a PDF document that can be loaded from various sources
 class PdfDocument {
-  final pw.Document _document;
   final Uint8List _bytes;
-  
-  PdfDocument._(this._document, this._bytes);
+
+  PdfDocument._(pw.Document document, this._bytes);
 
   /// Load a PDF from bytes
   static Future<PdfDocument> fromBytes(Uint8List bytes) async {

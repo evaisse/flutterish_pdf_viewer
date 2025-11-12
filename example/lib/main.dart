@@ -247,7 +247,8 @@ class PdfViewerDemo extends StatefulWidget {
 class _PdfViewerDemoState extends State<PdfViewerDemo> {
   final PdfController _controller = PdfController();
   final TextEditingController _urlController = TextEditingController(
-    text: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    text:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
   );
 
   @override
