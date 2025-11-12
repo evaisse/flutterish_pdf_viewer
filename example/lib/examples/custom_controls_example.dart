@@ -12,7 +12,8 @@ class CustomControlsExample extends StatefulWidget {
 class _CustomControlsExampleState extends State<CustomControlsExample> {
   final PdfController _controller = PdfController();
   final TextEditingController _urlController = TextEditingController(
-    text: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
+    text:
+        'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf',
   );
 
   @override
@@ -33,7 +34,7 @@ class _CustomControlsExampleState extends State<CustomControlsExample> {
     final timestamp = DateTime.now().millisecondsSinceEpoch;
     final filename = 'pdf_$timestamp.pdf';
     final path = await _controller.downloadPdf(filename);
-    
+
     if (path != null && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -127,9 +128,8 @@ class _CustomControlsExampleState extends State<CustomControlsExample> {
         children: [
           // Previous page button
           ElevatedButton.icon(
-            onPressed: _controller.currentPage > 0
-                ? _controller.previousPage
-                : null,
+            onPressed:
+                _controller.currentPage > 0 ? _controller.previousPage : null,
             icon: const Icon(Icons.chevron_left),
             label: const Text('Previous'),
             style: ElevatedButton.styleFrom(
@@ -154,7 +154,8 @@ class _CustomControlsExampleState extends State<CustomControlsExample> {
           // Next page button
           ElevatedButton.icon(
             onPressed: _controller.document != null &&
-                    _controller.currentPage < _controller.document!.pageCount - 1
+                    _controller.currentPage <
+                        _controller.document!.pageCount - 1
                 ? _controller.nextPage
                 : null,
             icon: const Icon(Icons.chevron_right),

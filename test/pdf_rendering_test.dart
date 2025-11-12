@@ -21,7 +21,7 @@ void main() {
 
     test('should create PdfDocument from test PDF bytes', () async {
       final document = await PdfDocument.fromBytes(pdfBytes);
-      
+
       expect(document, isNotNull);
       expect(document.bytes, equals(pdfBytes));
       expect(document.pageCount, greaterThanOrEqualTo(1));
@@ -29,14 +29,14 @@ void main() {
 
     test('should load test PDF into controller', () async {
       final controller = PdfController();
-      
+
       await controller.loadFromBytes(pdfBytes);
-      
+
       expect(controller.document, isNotNull);
       expect(controller.isLoading, isFalse);
       expect(controller.error, isNull);
       expect(controller.currentPage, equals(0));
-      
+
       controller.dispose();
     });
   });
@@ -73,7 +73,8 @@ void main() {
       );
     });
 
-    testWidgets('renders PDF viewer with controller', (WidgetTester tester) async {
+    testWidgets('renders PDF viewer with controller',
+        (WidgetTester tester) async {
       final controller = PdfController();
       await controller.loadFromBytes(pdfBytes);
 
@@ -100,7 +101,8 @@ void main() {
       controller.dispose();
     });
 
-    testWidgets('renders PDF viewer without controls', (WidgetTester tester) async {
+    testWidgets('renders PDF viewer without controls',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
@@ -122,7 +124,8 @@ void main() {
       );
     });
 
-    testWidgets('renders PDF viewer with custom background color', (WidgetTester tester) async {
+    testWidgets('renders PDF viewer with custom background color',
+        (WidgetTester tester) async {
       final controller = PdfController();
       await controller.loadFromBytes(pdfBytes);
 
@@ -210,7 +213,8 @@ void main() {
       pdfBytes = await file.readAsBytes();
     });
 
-    testWidgets('navigation controls work correctly', (WidgetTester tester) async {
+    testWidgets('navigation controls work correctly',
+        (WidgetTester tester) async {
       final controller = PdfController();
       await controller.loadFromBytes(pdfBytes);
 
@@ -234,7 +238,7 @@ void main() {
       final nextButton = find.widgetWithIcon(IconButton, Icons.arrow_forward);
       expect(nextButton, findsOneWidget);
 
-      // Tap next button (note: this won't work in the current implementation 
+      // Tap next button (note: this won't work in the current implementation
       // because pageCount is hardcoded to 1 in PdfDocument)
       await tester.tap(nextButton);
       await tester.pumpAndSettle();

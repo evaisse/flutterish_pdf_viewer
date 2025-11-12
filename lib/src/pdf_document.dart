@@ -6,7 +6,7 @@ import 'package:pdf/widgets.dart' as pw;
 class PdfDocument {
   final pw.Document _document;
   final Uint8List _bytes;
-  
+
   PdfDocument._(this._document, this._bytes);
 
   /// Load a PDF from bytes

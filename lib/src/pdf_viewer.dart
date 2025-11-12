@@ -52,7 +52,8 @@ class _PdfViewerState extends State<PdfViewer> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Icon(Icons.error_outline, size: 48, color: Colors.red),
+                      const Icon(Icons.error_outline,
+                          size: 48, color: Colors.red),
                       const SizedBox(height: 16),
                       Text(
                         widget.controller.error!,
@@ -83,11 +84,11 @@ class _PdfViewerState extends State<PdfViewer> {
     // 1. Parse the PDF structure
     // 2. Render each page using Flutter widgets
     // 3. Handle text, images, and vector graphics
-    
+
     // This is a placeholder that shows PDF metadata
     final document = widget.controller.document!;
     final bytes = document.bytes;
-    
+
     return Center(
       child: SingleChildScrollView(
         child: Column(
@@ -101,7 +102,8 @@ class _PdfViewerState extends State<PdfViewer> {
             ),
             const SizedBox(height: 10),
             Text('Size: ${bytes.length} bytes'),
-            Text('Current Page: ${widget.controller.currentPage + 1} / ${document.pageCount}'),
+            Text(
+                'Current Page: ${widget.controller.currentPage + 1} / ${document.pageCount}'),
             const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.all(16.0),

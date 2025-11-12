@@ -26,7 +26,7 @@ class _AssetPdfExampleState extends State<AssetPdfExample> {
       // Load PDF from assets
       final ByteData data = await rootBundle.load('assets/sample.pdf');
       final Uint8List bytes = data.buffer.asUint8List();
-      
+
       await _controller.loadFromBytes(bytes);
       setState(() {
         _isLoading = false;

@@ -15,7 +15,7 @@ Golden tests for PDF rendering with the test PDF file (pdf-test.pdf). These test
 - Different UI states (loading, no document, etc.)
 
 ### pdf-test.pdf
-A 10-page test PDF document (39,762 bytes) used for testing PDF loading and rendering.
+A test PDF document (39,762 bytes) used for testing PDF loading and rendering. Note: The file contains 10 pages, but the current implementation renders it as a single page since full PDF parsing is not yet implemented.
 
 ## Golden Tests
 
